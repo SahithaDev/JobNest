@@ -1,0 +1,22 @@
+{
+  "name": "jobnest",
+  "version": "1.0.0",
+  "description": "job",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "job"
+  ],
+  "author": "sahitha",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.16.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}
