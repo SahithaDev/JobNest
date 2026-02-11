@@ -50,6 +50,10 @@
   width: 100%;
 }
 
+.mx-auto {
+  margin-inline: auto;
+}
+
 .block {
   display: block;
 }
@@ -78,24 +82,8 @@
   display: table;
 }
 
-.w-\[13px\] {
-  width: 13px;
-}
-
-.w-\[100px\] {
-  width: 100px;
-}
-
-.w-\[110px\] {
-  width: 110px;
-}
-
 .w-\[150px\] {
   width: 150px;
-}
-
-.w-\[180px\] {
-  width: 180px;
 }
 
 .transform {
@@ -108,6 +96,14 @@
 
 .list-none {
   list-style-type: none;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .border {
