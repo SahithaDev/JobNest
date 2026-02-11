@@ -17469,7 +17469,7 @@ const Header = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "Contact Us"
+                        children: "Upload your Resume"
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
                         lineNumber: 11,
@@ -19833,11 +19833,14 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _jobCard = require("./JobCard");
+var _jobCardDefault = parcelHelpers.interopDefault(_jobCard);
 var _constant = require("../utils/constant");
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
     const [jobs, setJobs] = (0, _react.useState)([]);
+    const [searchText, setSearchText] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []);
@@ -19848,14 +19851,63 @@ const Body = ()=>{
         setJobs(json);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: jobs.map((item)=>{})
-    }, void 0, false, {
+        className: "p-4",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "py-4 m-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "border border-black rounded m-5 ",
+                        value: searchText,
+                        onChange: (e)=>{
+                            setSearchText(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 19,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        children: "Search"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 18,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: jobs.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jobCardDefault.default), {
+                            jobData: item
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 32,
+                            columnNumber: 13
+                        }, undefined)
+                    }, item.id, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 31,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 29,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 14,
-        columnNumber: 10
+        lineNumber: 17,
+        columnNumber: 5
     }, undefined);
 };
-_s(Body, "Q0mbvptFv5mszAZqWDb/1cpBDtw=");
+_s(Body, "oT9ktVsy6tomo5cplF23kzDtEO4=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -19866,6 +19918,79 @@ $RefreshReg$(_c, "Body");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"jMk1U","../utils/constant":"2QBK6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react/jsx-dev-runtime":"dVPUn"}]},["frqA7","hh6uc"], "hh6uc", "parcelRequirea548", {}, null, null, "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./JobCard":"dKMyd","../utils/constant":"2QBK6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dKMyd":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$eb7d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$eb7d.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$eb7d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const JobCard = (props)=>{
+    const { jobData } = props;
+    const { job_category, company, location, salary_from, salary_to, updated_at } = jobData;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "border rounded-lg p-4 gap-10 mb-6",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: job_category
+            }, void 0, false, {
+                fileName: "src/components/JobCard.js",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: company
+            }, void 0, false, {
+                fileName: "src/components/JobCard.js",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: location
+            }, void 0, false, {
+                fileName: "src/components/JobCard.js",
+                lineNumber: 15,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    salary_from,
+                    "-",
+                    salary_to
+                ]
+            }, void 0, true, {
+                fileName: "src/components/JobCard.js",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: updated_at
+            }, void 0, false, {
+                fileName: "src/components/JobCard.js",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/JobCard.js",
+        lineNumber: 12,
+        columnNumber: 5
+    }, undefined);
+};
+_c = JobCard;
+exports.default = JobCard;
+var _c;
+$RefreshReg$(_c, "JobCard");
+
+  $parcel$ReactRefreshHelpers$eb7d.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["frqA7","hh6uc"], "hh6uc", "parcelRequirea548", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=JobNest.2c54e4d8.js.map
