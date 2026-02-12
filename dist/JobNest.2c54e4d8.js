@@ -17433,68 +17433,91 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constant = require("../utils/constant");
+var _react = require("react");
+var _s = $RefreshSig$();
 const Header = ()=>{
+    _s();
+    const [loginBtn, setLoginBtn] = (0, _react.useState)("Login");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex items-center justify-between max-w-7xl mx-auto px-6 py-4 shadow-lg",
+        className: "flex justify-between shadow-lg",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     src: (0, _constant.LOGO_URL),
-                    className: "w-[150px]"
+                    className: "w-[112px]"
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 6,
+                    lineNumber: 9,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 5,
+                lineNumber: 8,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                className: " flex items-center gap-8 text-sm font-medium list-none ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "Find Jobs"
-                    }, void 0, false, {
-                        fileName: "src/components/Header.js",
-                        lineNumber: 9,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "About Us"
-                    }, void 0, false, {
-                        fileName: "src/components/Header.js",
-                        lineNumber: 10,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "Upload your Resume"
-                    }, void 0, false, {
-                        fileName: "src/components/Header.js",
-                        lineNumber: 11,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: "Support"
-                    }, void 0, false, {
-                        fileName: "src/components/Header.js",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    className: "flex  gap-5 p-2 py-2 m-6 font-semibold  list-none",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Find Jobs"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 13,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "About Us"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 14,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Upload your Resume"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Support"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 16,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "border rounded-md px-2 py-2 mx-2 bg-blue-300",
+                            onClick: ()=>{
+                                loginBtn === "Login" ? setLoginBtn("Logout") : setLoginBtn("Login");
+                            },
+                            children: loginBtn
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 17,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 8,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 4,
+        lineNumber: 7,
         columnNumber: 5
     }, undefined);
 };
+_s(Header, "ZtuLB9qQt5cbeHdjw7KfAHhwSHk=");
 _c = Header;
 exports.default = Header;
 var _c;
@@ -17505,12 +17528,12 @@ $RefreshReg$(_c, "Header");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","../utils/constant":"2QBK6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2QBK6":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","../utils/constant":"2QBK6","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2QBK6":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
 parcelHelpers.export(exports, "DUMMY_API", ()=>DUMMY_API);
-const LOGO_URL = "https://cdn.dribbble.com/userupload/36309026/file/original-c3336e32daef82f3fe80048ef73b45a9.jpg";
+const LOGO_URL = "https://images-platform.99static.com//gLPHksdH2OdHv_KDM_cwpKUtyCE=/115x100:1067x1052/fit-in/500x500/99designs-contests-attachments/117/117444/attachment_117444264";
 const DUMMY_API = "https://jsonfakery.com/jobs";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
@@ -19840,7 +19863,8 @@ var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
     const [jobs, setJobs] = (0, _react.useState)([]);
-    const [searchText, setSearchText] = (0, _react.useState)([]);
+    const [searchText, setSearchText] = (0, _react.useState)(" ");
+    const [filterJobs, setFilterJobs] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []);
@@ -19849,65 +19873,69 @@ const Body = ()=>{
         const json = await data.json();
         console.log(json);
         setJobs(json);
+        setFilterJobs(json);
     };
+    (0, _react.useEffect)(()=>{
+        const timer = setTimeout(()=>{
+            const searchRole = jobs.filter((item)=>item.job_category.toLowerCase().includes(searchText.toLowerCase()));
+            setFilterJobs(searchRole);
+        }, 300);
+        return ()=>{
+            clearTimeout(timer);
+        };
+    }, [
+        searchText,
+        jobs
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "p-4",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "py-4 m-4",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        className: "border border-black rounded m-5 ",
-                        value: searchText,
-                        onChange: (e)=>{
-                            setSearchText(e.target.value);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 19,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        children: "Search"
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 27,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                className: " justify-center flex m-6",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "text",
+                    className: "border border-black rounded-lg m-5 p-2 px-60 ",
+                    value: searchText,
+                    onChange: (e)=>{
+                        setSearchText(e.target.value);
+                    }
+                }, void 0, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 32,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 18,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: jobs.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: filterJobs.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jobCardDefault.default), {
                             jobData: item
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 32,
+                            lineNumber: 44,
                             columnNumber: 13
                         }, undefined)
                     }, item.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 31,
+                        lineNumber: 43,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 29,
+                lineNumber: 41,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 17,
+        lineNumber: 30,
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "oT9ktVsy6tomo5cplF23kzDtEO4=");
+_s(Body, "qjcENoxYmuHT+j++tyWpBtShUZM=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -19936,6 +19964,7 @@ const JobCard = (props)=>{
         className: "border rounded-lg p-4 gap-10 mb-6",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "font-bold text-lg py-2",
                 children: job_category
             }, void 0, false, {
                 fileName: "src/components/JobCard.js",
@@ -19959,7 +19988,7 @@ const JobCard = (props)=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     salary_from,
-                    "-",
+                    " - ",
                     salary_to
                 ]
             }, void 0, true, {

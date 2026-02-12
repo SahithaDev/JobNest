@@ -1,4 +1,4 @@
 export const LOGO_URL =
-  "https://cdn.dribbble.com/userupload/36309026/file/original-c3336e32daef82f3fe80048ef73b45a9.jpg";
+  "https://images-platform.99static.com//gLPHksdH2OdHv_KDM_cwpKUtyCE=/115x100:1067x1052/fit-in/500x500/99designs-contests-attachments/117/117444/attachment_117444264";
 
 export const DUMMY_API = "https://jsonfakery.com/jobs";

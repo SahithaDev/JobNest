@@ -1,17 +1,33 @@
 import { LOGO_URL } from "../utils/constant";
+import { useState } from "react";
+
 const Header = () => {
+  const [loginBtn, setLoginBtn] = useState("Login");
   return (
-    <div className="flex items-center justify-between max-w-7xl mx-auto px-6 py-4 shadow-lg">
-      <div>
-        <img src={LOGO_URL} className="w-[150px]" />
+    <div className="flex justify-between shadow-lg">
+      <div className="">
+        <img src={LOGO_URL} className="w-[112px]" />
       </div>
-      <ul className=" flex items-center gap-8 text-sm font-medium list-none ">
-        <li>Find Jobs</li>
-        <li>About Us</li>
-        <li>Upload your Resume</li>
-        <li>Support</li>
-      </ul>
+      <div>
+        <ul className="flex  gap-5 p-2 py-2 m-6 font-semibold  list-none">
+          <li>Find Jobs</li>
+          <li>About Us</li>
+          <li>Upload your Resume</li>
+          <li>Support</li>
+          <button
+            className="border rounded-md px-2 py-2 mx-2 bg-blue-300"
+            onClick={() => {
+              loginBtn === "Login"
+                ? setLoginBtn("Logout")
+                : setLoginBtn("Login");
+            }}
+          >
+            {loginBtn}
+          </button>
+        </ul>
+      </div>
     </div>
   );
 };
+
 export default Header;

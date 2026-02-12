@@ -3,7 +3,8 @@ import JobCard from "./JobCard";
 import { DUMMY_API } from "../utils/constant";
 const Body = () => {
   const [jobs, setJobs] = useState([]);
-  const [searchText, setSearchText] = useState([]);
+  const [searchText, setSearchText] = useState(" ");
+  const [filterJobs, setFilterJobs] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
@@ -12,22 +13,33 @@ const Body = () => {
     const json = await data.json();
     console.log(json);
     setJobs(json);
+    setFilterJobs(json);
   };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const searchRole = jobs.filter((item) =>
+        item.job_category.toLowerCase().includes(searchText.toLowerCase()),
+      );
+      setFilterJobs(searchRole);
+    }, 300);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [searchText, jobs]);
   return (
     <div className="p-4">
-      <div className="py-4 m-4">
+      <div className=" justify-center flex m-6">
         <input
           type="text"
-          className="border border-black rounded m-5 "
+          className="border border-black rounded-lg m-5 p-2 px-60 "
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
           }}
         />
-        <button>Search</button>
       </div>
       <div>
-        {jobs.map((item) => (
+        {filterJobs.map((item) => (
           <div key={item.id}>
             <JobCard jobData={item} />
           </div>
