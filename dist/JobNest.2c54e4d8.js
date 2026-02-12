@@ -19865,6 +19865,7 @@ const Body = ()=>{
     const [jobs, setJobs] = (0, _react.useState)([]);
     const [searchText, setSearchText] = (0, _react.useState)(" ");
     const [filterJobs, setFilterJobs] = (0, _react.useState)([]);
+    const [suggestions, setSuggestions] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []);
@@ -19879,6 +19880,7 @@ const Body = ()=>{
         const timer = setTimeout(()=>{
             const searchRole = jobs.filter((item)=>item.job_category.toLowerCase().includes(searchText.toLowerCase()));
             setFilterJobs(searchRole);
+            setSuggestions(searchRole.slice(0, 7));
         }, 300);
         return ()=>{
             clearTimeout(timer);
@@ -19891,22 +19893,61 @@ const Body = ()=>{
         className: "p-4",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: " justify-center flex m-6",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    className: "border border-black rounded-lg m-5 p-2 px-60 ",
-                    value: searchText,
-                    onChange: (e)=>{
-                        setSearchText(e.target.value);
-                    }
-                }, void 0, false, {
-                    fileName: "src/components/Body.js",
-                    lineNumber: 32,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
+                className: " justify-center flex m-6 relative",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "border border-black rounded-lg p-2 w-[450px] ",
+                        value: searchText,
+                        placeholder: "Search jobs...",
+                        onChange: (e)=>{
+                            setSearchText(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 35,
+                        columnNumber: 9
+                    }, undefined),
+                    suggestions.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "absolute top-full left-0 mt-1 w-[450px] bg-white border border-gray-300 rounded shadow-lg z-10",
+                        children: suggestions.map((job)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "px-4 py-2 hover:bg-gray-100 cursor-pointer",
+                                onClick: ()=>{
+                                    setSearchText(job.job_category);
+                                    setSuggestions([]);
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "font-medium",
+                                        children: job.job_category
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 54,
+                                        columnNumber: 18
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "",
+                                        children: job.company
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 55,
+                                        columnNumber: 17
+                                    }, undefined)
+                                ]
+                            }, job.id, true, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 47,
+                                columnNumber: 17
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 45,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 31,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -19915,27 +19956,27 @@ const Body = ()=>{
                             jobData: item
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 44,
+                            lineNumber: 63,
                             columnNumber: 13
                         }, undefined)
                     }, item.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 43,
+                        lineNumber: 62,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 41,
+                lineNumber: 60,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 30,
+        lineNumber: 33,
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "qjcENoxYmuHT+j++tyWpBtShUZM=");
+_s(Body, "ovyQuHBb8kVRkhJZd51sxqQHyVI=");
 _c = Body;
 exports.default = Body;
 var _c;
